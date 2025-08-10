@@ -1,0 +1,102 @@
+[
+  {
+    "layer": "top",
+    "position": "top",
+    "output": [
+      "DP-3"
+    ],
+    "modules-center": [
+      "clock"
+    ],
+    "clock": {
+      "timezone": "Europe/Warsaw",
+      "tooltip": true,
+      "format": "{:%H:%M}"
+    },
+    "modules-left": [
+      "hyprland/workspaces"
+    ],
+    "modules-right": [
+      "cpu",
+      "memory"
+    ],
+    "cpu": {
+      "interval": 1,
+      "format": "  {usage:>2}% ",
+      "format-icons": [
+        "▁",
+        "▂",
+        "▃",
+        "▄",
+        "▅",
+        "▆",
+        "▇",
+        "█"
+      ]
+    },
+    "memory": {
+      "interval": 5,
+      "format": "  {used:0.1f}GiB/{total:0.1f}GiB ",
+      "tooltip": true
+    },
+    "hyprland/workspaces": {
+      "format": "{name}"
+    }
+  },
+  {
+    "layer": "top",
+    "position": "top",
+    "output": [
+      "HDMI-A-1"
+    ],
+    "modules-left": [
+      "hyprland/workspaces"
+    ],
+    "modules-center": [
+      "clock"
+    ],
+    "clock": {
+      "timezone": "Europe/Warsaw",
+      "tooltip": true,
+      "format": "{:%a, %d. %b %Y }"
+    },
+    "modules-right": [
+      "network",
+      "pulseaudio",
+      "tray"
+    ],
+    "network": {
+      "format": "↓{bandwidthDownBytes:>} ↑{bandwidthUpBytes:>}"
+    },
+    "hyprland/workspaces": {
+      "format": "{name}"
+    },
+    "pulseaudio": {
+      "format": "{volume}% {icon}",
+      "format-bluetooth": "{volume}% {icon}",
+      "format-muted": "🔇 Muted",
+      "format-icons": {
+        "headphone": "🎧",
+        "handsfree": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": [
+          "🔈",
+          "🔉",
+          "🔊"
+        ]
+      },
+      "on-click": "pavucontrol",
+      "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+      "on-scroll-up": "~/.config/waybar/volume-up.sh",
+      "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+    },
+    "tray": {
+      "icon-size": 16,
+      "spacing": 8,
+      "show-passive-items": false
+    }
+  }
+]

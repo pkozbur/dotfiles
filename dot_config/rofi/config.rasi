@@ -1,0 +1,49 @@
+
+
+configuration {
+    show-icons: true; 
+}
+
+window {
+    transparency: "real";
+    background-color: #17153B80;  
+    border: 1px solid;
+    border: #433D8B;    
+}
+
+entry {
+    background-color: #17153B80;  
+    text-color: #C8ACD6;         
+}
+
+listview {
+    background-color: #17153B80;  
+    padding: 8px;                 
+    spacing: 2px;                 
+    cycles: true;
+}
+
+element {
+    background-color: #17153B;    
+    text-color: #C8ACD6;          
+    border-color: #433D8B;
+}
+
+element.alternate.normal {
+    background-color: #1A1742;    
+    text-color:       #C8ACD6;
+}
+
+element normal.normal {
+    background-color: #17153B;  
+    text-color: #C8ACD6;     
+}
+
+element selected {
+    background-color: #2E236C;   
+    text-color: #FFFFFF;         
+}
+
+prompt {
+    enabled: false;
+}
